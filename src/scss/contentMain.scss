@@ -1,0 +1,23 @@
+.contnet-main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .first-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .information-list {
+
+            .addContent {
+                position: absolute;
+                left: 700px;
+                top: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: orange;
+                }
+            }
+        }
+    }
+}

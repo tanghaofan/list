@@ -1,8 +1,14 @@
 import React from 'react';
 import InformationItem from './informationItem';
 import InformationList from '../../scss/informationList.scss';
-// import ajax from '../common/ajax.js'
+import ajax from '../common/ajax';
 
+// let data ;
+// function getData(oldData) {
+//     data = JSON.parse(oldData);
+//     console.log(data)
+// }
+// ajax('GET', 'src/data/data.txt', true, '', getData);
 const data = [
     {
         "title": "magasa",
@@ -65,8 +71,6 @@ const data = [
         "id": 10,
     }
 ]
-
-// const data = Ajax()
 class informationList extends React.Component {
 	constructor(props) {
 		super(props);
@@ -75,6 +79,7 @@ class informationList extends React.Component {
             id: null
         }
         console.log(this.getId)
+        console.log(data);
         this.getId = this.getId.bind(this);
         this.addContent = this.addContent.bind(this);
 	}

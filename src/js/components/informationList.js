@@ -98,6 +98,7 @@ class informationList extends React.Component {
         this.onDealData();
         return true;
     }
+    // 获取id
     getId(id) {
         this.setState({
             id
@@ -111,6 +112,7 @@ class informationList extends React.Component {
         this.onDealData()
 
     }
+    // 增加新列表
     addContent() {
         let newList = this.state.list;
         console.log(newList)
@@ -126,6 +128,7 @@ class informationList extends React.Component {
         })
         this.onDealData();
     }
+    // 渲染页面
 	onDealData () {
 		var row = [];
         let { changeId, setInformation } = this.props;

@@ -11,24 +11,28 @@ class informationItem extends React.Component {
                 this.inpShow = this.inpShow.bind(this);
                 this.inpHide = this.inpHide.bind(this)
         }
+        // 显示详细文章
         onClick() {
                 let { changeId, id, setInformation } = this.props;
                 changeId(id);
                 setInformation(true);
         }
+        // 删除列表
         deleteClick() {
                 let { getId, id } = this.props;
                 console.log(id)
                 getId(id);
         }
+        // 显示编辑框
         inpShow() {
                 const id = this.props.id;
                 let inp = document.getElementsByTagName('input')[id-1];
                 let h3 = document.getElementsByTagName('h3')[id-1];
                 h3.style.display = 'none';
                 inp.style.display = "inline-block";
-                inp.value = this.props.title;
+                inp.value = h3.innerHTML;
         }
+        // 隐藏编辑框
         inpHide() {
                 const id = this.props.id;
                 let inp = document.getElementsByTagName('input')[id-1];
